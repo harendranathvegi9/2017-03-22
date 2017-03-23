@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'flight-search',
     templateUrl: './flight-search.component.html',
+    styleUrls: ['./flight-search.component.css'],
     providers: [FlightService]
 })
 export class FlightSearchComponent {
