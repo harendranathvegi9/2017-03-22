@@ -1,3 +1,6 @@
+import { SharedModule } from './shared/shared.module';
+import { FlightBookingModule } from './flight-booking/flight-booking.module';
+import { CityPipe } from './shared/pipes/city.pipe';
 import { BASE_URL } from './app.tokens';
 import { FlightService } from './flight-booking/flight-search/flight.service';
 import { FlightSearchComponent } from './flight-booking/flight-search/flight-search.component';
@@ -9,14 +12,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FlightSearchComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    FlightBookingModule
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [
     // { provide: FlightService, useClass: FlightService }
