@@ -2,10 +2,12 @@
 
 <form #filter="ngForm" novalidate roundTrip>
 
+<!--
 <div *ngIf="!filter?.valid">
     Error
     <pre>{{filter?.errors | json}}</pre>
 </div>    
+-->
 
 <div *ngIf="filter?.hasError('roundTrip')">
     RoundTrip geht ned!
@@ -33,7 +35,9 @@
     
     <div *ngIf="!filter?.controls?.from?.valid && !filter?.controls?.from?.pending">
         Fehler in Eingabefeld
+        <!--
         <pre>{{ filter?.controls?.from?.errors | json }}</pre>
+        -->
     </div>
     <div *ngIf="filter?.controls?.from?.hasError('required')">
         Required

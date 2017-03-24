@@ -10,13 +10,13 @@ import 'rxjs/add/operator/map';
     selector: 'flight-search',
     templateUrl: './flight-search.component.html',
     styleUrls: ['./flight-search.component.css'],
-    providers: [FlightService]
+    providers: []
 })
 export class FlightSearchComponent {
 
-    from: string;
-    to: string;
-    flights: Array<Flight> = [];
+    from: string = "Hamburg";
+    to: string = "Graz";
+    // flights: Array<Flight> = [];
     selectedFlight: Flight;
 
     basket = {
@@ -35,20 +35,14 @@ export class FlightSearchComponent {
     constructor(private flightService: FlightService) {
     }
 
+    // let fs = comp.flights
+    get flights() {
+        return this.flightService.flights;
+    }
 
     search(): void {
 
-        this.flightService
-            .find(this.from, this.to)
-            .subscribe(
-                (flights: Flight[]) => {
-                    this.flights = flights;
-                },
-                (errResponse) => {
-                    console.error('Fehler beim Laden', errResponse);
-                }
-
-            ); 
+        this.flightService.find(this.from, this.to);
     }
 
     select(f: Flight) {

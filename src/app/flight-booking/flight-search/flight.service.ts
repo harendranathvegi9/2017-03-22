@@ -12,7 +12,9 @@ export class FlightService {
         @Inject(BASE_URL) private baseUrl: string) {
     }
 
-    find(from: string, to: string): Observable<Flight[]> {
+    flights: Flight[] = [];
+
+    find(from: string, to: string): void {
 
         let url = this.baseUrl + '/api/flight';
 
@@ -23,10 +25,18 @@ export class FlightService {
         search.set('from', from);
         search.set('to', to);
 
-        return this
-                .http
-                .get(url, { headers, search })
-                .map(resp => resp.json());
+        this
+            .http
+            .get(url, { headers, search })
+            .map(resp => resp.json())
+            .subscribe(
+                (flights: Flight[]) => {
+                    this.flights = flights;
+                },
+                (err) => {
+                    console.error('Fehler beim Laden', err);
+                }
+            );
 
 
     }

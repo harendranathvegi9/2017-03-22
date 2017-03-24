@@ -19,8 +19,8 @@ export class AsyncCityValidationDirective implements Validator  {
             // ASYNC
             // http.get(...)
             setTimeout(() => {
-                resolve({ asyncCity: true });
-            }, 3000);
+                resolve({ /*asyncCity: true*/ });
+            }, 300);
         });
 
     }

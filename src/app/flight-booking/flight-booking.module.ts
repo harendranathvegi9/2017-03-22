@@ -1,3 +1,5 @@
+import { FlightBookingComponent } from './flight-booking.component';
+import { FlightService } from './flight-search/flight.service';
 import { FlightEditComponent } from './flight-edit/flight-edit.component';
 import { PassengerSearchComponent } from './passenger-search/passenger-search.component';
 import { FlightBookingRoutesModule } from './flight-booking.routes';
@@ -22,10 +24,11 @@ import { NgModule } from '@angular/core';
         FlightCardComponent,
         ReactiveFlightSearchComponent,
         PassengerSearchComponent,
-        FlightEditComponent
+        FlightEditComponent,
+        FlightBookingComponent
     ],
     providers: [
-        /* z. B. FlightService */
+        // FlightService
     ],
     exports: [
         FlightSearchComponent,
