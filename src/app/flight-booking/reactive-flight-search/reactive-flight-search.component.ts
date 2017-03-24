@@ -73,16 +73,9 @@ export class ReactiveFlightSearchComponent {
         let to = this.filter.value.to;
 
         this.flightService
-            .find(from, to)
-            .subscribe(
-                (flights: Flight[]) => {
-                    this.flights = flights;
-                },
-                (errResponse) => {
-                    console.error('Fehler beim Laden', errResponse);
-                }
+            .find(from, to);
 
-            ); 
+
     }
 
     select(f: Flight) {

@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const FLIGHT_BOOKING_ROUTES: Routes = [
     {
-        path: 'flight-booking',
+        path: '',
         component: FlightBookingComponent,
         children: [
             {

@@ -6,6 +6,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('Test', () => {
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -21,8 +22,12 @@ describe('Test', () => {
     });
   }));
 
-  it('null is not undefined', async(() => {
+  it('null is not undefined', () => {
     expect(null).not.toBe(undefined);
+  });
+
+ it('true is not false', async(() => {
+    expect(true).not.toBe(false);
   }));
 
 });

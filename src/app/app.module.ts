@@ -18,8 +18,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FlightBookingModule,
-    AppRoutesModule
+    // FlightBookingModule,
+    AppRoutesModule,
+    SharedModule
   ],
   declarations: [
     AppComponent,

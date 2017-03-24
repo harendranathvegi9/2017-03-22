@@ -1,3 +1,4 @@
+import { CustomPreloadingStrategy } from './preload/custom-preloading-strategy';
 import { AsyncCityValidationDirective } from './validation/async-city.validation.directive';
 import { RoundTripValidationDirective } from './validation/round-trip.validation.directive';
 import { CityValidationDirective } from './validation/city.validation.directive';
@@ -14,6 +15,9 @@ import { CommonModule } from '@angular/common';
         CityValidationDirective,
         RoundTripValidationDirective,
         AsyncCityValidationDirective
+    ],
+    providers: [
+        CustomPreloadingStrategy
     ],
     exports: [
         CityPipe,
