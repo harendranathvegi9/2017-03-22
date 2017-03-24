@@ -1,3 +1,4 @@
+import { browser, element, by } from 'protractor';
 import { StarterkitPage } from './app.po';
 
 describe('starterkit App', () => {

@@ -1,3 +1,5 @@
+import { AsyncCityValidationDirective } from './validation/async-city.validation.directive';
+import { RoundTripValidationDirective } from './validation/round-trip.validation.directive';
 import { CityValidationDirective } from './validation/city.validation.directive';
 import { CityPipe } from './pipes/city.pipe';
 import { NgModule } from '@angular/core';
@@ -9,11 +11,15 @@ import { CommonModule } from '@angular/common';
     ],
     declarations: [
         CityPipe,
-        CityValidationDirective
+        CityValidationDirective,
+        RoundTripValidationDirective,
+        AsyncCityValidationDirective
     ],
     exports: [
         CityPipe,
-        CityValidationDirective
+        CityValidationDirective,
+        RoundTripValidationDirective,
+        AsyncCityValidationDirective
     ]
 })
 export class SharedModule {
