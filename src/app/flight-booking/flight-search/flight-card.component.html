@@ -6,7 +6,8 @@
     <p>Datum: {{item.date | date:'dd.MM.yyyy HH:mm'}}</p>
     **{{ subj | async}}
     <p>
-       <button *ngIf="!selected" (click)="select()">Auswählen</button>
-       <button *ngIf="selected" (click)="deselect()">Entfernen</button>   
+       <button class="btn btn-default" *ngIf="!selected" (click)="select()">Auswählen</button>
+       <button class="btn btn-default" *ngIf="selected" (click)="deselect()">Entfernen</button>   
+       <a class="btn btn-default" [routerLink]="['/flight-edit', item.id, { showDetails: true, manfredWarHier:true }]">Edit</a>
     </p>
 </div>

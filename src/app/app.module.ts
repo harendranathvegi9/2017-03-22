@@ -1,3 +1,5 @@
+import { HomeComponent } from './home/home.component';
+import { AppRoutesModule } from './app.routes';
 import { SharedModule } from './shared/shared.module';
 import { FlightBookingModule } from './flight-booking/flight-booking.module';
 import { CityPipe } from './shared/pipes/city.pipe';
@@ -16,10 +18,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FlightBookingModule
+    FlightBookingModule,
+    AppRoutesModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   providers: [
     // { provide: FlightService, useClass: FlightService }
